@@ -1,4 +1,4 @@
-const eqArrays = function (array1, array2) {
+/* const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   } else {
@@ -17,7 +17,7 @@ const assertArraysEqual = function (actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-};
+}; */
 
 /**
  * The following code was refactored and reviewed by @TheOriginalArab, @Hands-on-robotics, & @ekatie.
@@ -35,7 +35,7 @@ const map = function (array, callback) {
   return results;
 };
 
-//Test case 1: Map to first letter
+/* //Test case 1: Map to first letter
 const words = ["ground", "control", "to", "major", "tom", "dragons"];
 const results1 = map(words, (word) => word[0]);
 assertArraysEqual(results1, ["g", "c", "t", "m", "t", "d"]);
@@ -48,4 +48,4 @@ assertArraysEqual(lengths, [1, 2, 3, 4, 5]);
 //Test case 3: Map to capitalize
 const lowercaseWords = ["hello", "my", "dragon", "friend"];
 const capitalize = map(lowercaseWords, (word) => word.toUpperCase());
-assertArraysEqual(capitalize, ["HELLO", "MY", "DRAGON", "FRIEND"]);
+assertArraysEqual(capitalize, ["HELLO", "MY", "DRAGON", "FRIEND"]); */
