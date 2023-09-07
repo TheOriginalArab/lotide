@@ -29,9 +29,26 @@ const eqObjects = function (object1, object2) {
     return false;
   }
 
+  /* for (const key of keys1) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (object1[key] !== object2[key]) {
+      return false;
+    }
+  } */
+
   for (const key of keys1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (
+      typeof object1[key] === "object" &&
+      typeof object2[key] === "object"
+    ) {
+      if (!eqObjects(object1[key], object2[key])) {
         return false;
       }
     } else if (object1[key] !== object2[key]) {
@@ -42,7 +59,7 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
-const shirtObject = { color: "red", size: "medium" };
+/* const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 const longSleeveShirtObject = {
   size: "medium",
@@ -72,4 +89,19 @@ assertEqual(
 ); // => false
 
 assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
+assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false); */
+
+/* const firstObject = { a: [1, 2, 3], b: { x: 2, y: [3, 4] }, c: 4 };
+const secondObject = {
+  a: [1, 2, 3],
+  b: { x: 2, y: [3, 4] },
+  c: 4,
+  d: { z: 5 },
+}; */
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
+
+assertEqual(
+  eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),
+  false
+); // => false
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false
