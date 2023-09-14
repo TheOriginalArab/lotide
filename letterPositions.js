@@ -19,7 +19,6 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-
 /**
  * This function will return all the indices (zero-based positions) in the string where each character is found.
  * @param {string} sentence takes in a string to count the position of letters
