@@ -9,15 +9,7 @@ const findKey = function (object, callback) {
 
 module.exports = findKey;
 
-/* const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-//Test Case 1: Finding the first value with a truthy value (string value).
+/* //Test Case 1: Finding the first value with a truthy value (string value).
 const fruits = {
   apple: "red",
   banana: "yellow",
