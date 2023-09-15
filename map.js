@@ -35,6 +35,8 @@ const map = function (array, callback) {
   return results;
 };
 
+module.exports = map;
+
 /* //Test case 1: Map to first letter
 const words = ["ground", "control", "to", "major", "tom", "dragons"];
 const results1 = map(words, (word) => word[0]);
