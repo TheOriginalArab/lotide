@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@peterhashem/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/TheOriginalArab/lotide.git"
   },
-  "author": "",
+  "author": "Peter Hashem",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TheOriginalArab/lotide/issues"

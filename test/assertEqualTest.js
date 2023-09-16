@@ -1,7 +1,5 @@
 const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
 
-assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
-assertEqual(5, 0.5);
 assertEqual("Dom", "Dom");
-assertEqual("Nick", 95);
